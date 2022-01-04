@@ -1,0 +1,42 @@
+.Cards {
+	display: grid;
+	grid-template-columns: repeat(var(--columns, 1), 1fr);
+}
+@media (min-width: 487px) {
+	.Cards {
+		--columns: 2;
+	}
+}
+
+.CardWrapper {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.Card {
+	background: yellowgreen;
+	width: 300px;
+	border-radius: 10px;
+	border: 1px solid black;
+}
+
+.CardImage {
+	border: 2px solid black;
+	width: 100%;
+	border-radius: 10px;
+}
+.CardHeadline {
+	margin-left: 75px;
+}
+.CardDescription {
+	padding: 5px;
+	margin-left: 5px;
+	margin-right: 5px;
+}
+.CardButton {
+	background: silver;
+	border-radius: 10px;
+	margin-bottom: 10px;
+	margin-left: 100px;
+}
