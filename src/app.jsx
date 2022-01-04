@@ -6,17 +6,17 @@ import Solutions from "./pages/solutions";
 import "./styles.css";
 
 const App = () => {
-  return (
-    <BrowserRouter>
-      <Routes>
-        <Route path="/">
-          <Route index element={<Home />} />
-          <Route path="exercises/:page" element={<Exercises />} />
-          <Route path="solutions/:page" element={<Solutions />} />
-        </Route>
-      </Routes>
-    </BrowserRouter>
-  );
+	return (
+		<BrowserRouter>
+			<Routes>
+				<Route path="/">
+					<Route index element={<Home />} />
+					<Route path="exercises/:page" element={<Exercises />} />
+					<Route path="solutions/:page" element={<Solutions />} />
+				</Route>
+			</Routes>
+		</BrowserRouter>
+	);
 };
 
 export default App;

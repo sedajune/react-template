@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
-import Card from "../components/card.jsx";
-import styles from "../components/card.module.css";
+import Card from "../components/card/index.jsx";
+import Grid from "../components/grid/index.jsx";
 
 /**
  * ## Users
@@ -10,30 +10,30 @@ import styles from "../components/card.module.css";
  * - ! Make sure that there are no errors about the `key` property in the web-console
  */
 const Exercise = () => {
-  const [items, setItems] = useState([]);
-  useEffect(() => {
-    void fetch("https://randomuser.me//api?results=10")
-      .then((response) => response.json())
-      .then(({ results }) => {
-        setItems(results);
-      })
-      .catch((error_) => {
-        console.error(error_);
-      });
-  }, []);
+	const [items, setItems] = useState([]);
+	useEffect(() => {
+		void fetch("https://randomuser.me//api?results=10")
+			.then((response) => response.json())
+			.then(({ results }) => {
+				setItems(results);
+			})
+			.catch((error_) => {
+				console.error(error_);
+			});
+	}, []);
 
-  return (
-    <div className={styles.Cards}>
-      {items.map((item) => (
-        <Card
-          key={item.login.uuid}
-          headline={`${item.name.first} ${item.name.last}`}
-          description={`Email: ${item.email}`}
-          image={{ src: item.picture.large }}
-        />
-      ))}
-    </div>
-  );
+	return (
+		<Grid>
+			{items.map((item) => (
+				<Card
+					key={item.login.uuid}
+					headline={`${item.name.first} ${item.name.last}`}
+					description={`Email: ${item.email}`}
+					image={{ src: item.picture.large }}
+				/>
+			))}
+		</Grid>
+	);
 };
 
 export default Exercise;

@@ -13,7 +13,7 @@ import React from "react";
  *     - Success Message: "You are subscribed!"
  */
 const Exercise = () => {
-  return <h1>Exercise 6</h1>;
+	return <h1>Exercise 6</h1>;
 };
 
 export default Exercise;

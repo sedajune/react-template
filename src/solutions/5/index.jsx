@@ -14,43 +14,43 @@ import React, { useState } from "react";
  *
  */
 const Exercise = () => {
-  const [data, setData] = useState(null);
-  return (
-    <div>
-      {data ? (
-        <div>
-          <p>Message sent!</p>
-          <p>{data.email}</p>
-          <p>{data.message}</p>
-        </div>
-      ) : (
-        <form
-          onSubmit={(event_) => {
-            event_.preventDefault();
-            const formData = new FormData(event_.target);
-            const values = Object.fromEntries(formData);
-            setData(values);
-          }}
-        >
-          <div>
-            <label>
-              Email:
-              <br />
-              <input type="email" name="email" />
-            </label>
-          </div>
-          <div>
-            <label>
-              Message:
-              <br />
-              <textarea name="message" />
-            </label>
-          </div>
-          <button type="submit">Send</button>
-        </form>
-      )}
-    </div>
-  );
+	const [data, setData] = useState(null);
+	return (
+		<div>
+			{data ? (
+				<div>
+					<p>Message sent!</p>
+					<p>{data.email}</p>
+					<p>{data.message}</p>
+				</div>
+			) : (
+				<form
+					onSubmit={(event_) => {
+						event_.preventDefault();
+						const formData = new FormData(event_.target);
+						const values = Object.fromEntries(formData);
+						setData(values);
+					}}
+				>
+					<div>
+						<label>
+							Email:
+							<br />
+							<input type="email" name="email" />
+						</label>
+					</div>
+					<div>
+						<label>
+							Message:
+							<br />
+							<textarea name="message" />
+						</label>
+					</div>
+					<button type="submit">Send</button>
+				</form>
+			)}
+		</div>
+	);
 };
 
 export default Exercise;
