@@ -4,7 +4,8 @@
   "description": "React.js exercises",
   "main": "n.a.",
   "scripts": {
-    "dev": "react-scripts start"
+    "dev": "react-scripts start",
+    "build": "react-scripts build"
   },
   "author": {
     "name": "Gregor Adams",
