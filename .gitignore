@@ -69,3 +69,7 @@ out
 
 # IntelliJ
 .idea
+
+# Build
+
+build

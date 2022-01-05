@@ -11,12 +11,16 @@ const Home = () => {
 						return (
 							<Fragment key={page}>
 								<div>
+									<Link to={`/exercises/${page}`}>Exercise {page}</Link> (
+									<Link to={`/solutions/${page}`}>Solution</Link> )
+								</div>
+								<div>
 									<Link to={`/exercises/${page}_5`}>Exercise {page + 0.5}</Link> (
 									<Link to={`/solutions/${page}_5`}>Solution</Link> )
 								</div>
 								<div>
-									<Link to={`/exercises/${page}`}>Exercise {page}</Link> (
-									<Link to={`/solutions/${page}`}>Solution</Link> )
+									<Link to={`/exercises/${page}_6`}>Exercise {page + 0.6}</Link> (
+									<Link to={`/solutions/${page}_6`}>Solution</Link> )
 								</div>
 							</Fragment>
 						);
