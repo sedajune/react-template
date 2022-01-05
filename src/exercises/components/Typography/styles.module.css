@@ -1,0 +1,12 @@
+.Typo {
+	font-family: sans-serif;
+}
+
+.headline {
+	font-family: "Licorice", cursive;
+	font-size: 2em;
+	font-weight: normal;
+}
+.footnote {
+	font-size: 0.7em;
+}

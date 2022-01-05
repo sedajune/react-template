@@ -1,6 +1,5 @@
 import React from "react";
-import styles from "../components/styles.module.css";
-import Card from "../components/card.jsx";
+import Card from "../components/Card";
 
 /**
  * ## Cards
