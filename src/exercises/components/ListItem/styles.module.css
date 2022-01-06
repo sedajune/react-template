@@ -1,0 +1,14 @@
+@counter-style thumbs {
+	system: cyclic;
+	symbols: "\1F44D";
+	suffix: " ";
+}
+
+.ListItem {
+	color: navy;
+	list-style: thumbs;
+}
+.ListItem::marker {
+	color: blue;
+	font-size: 1.2em;
+}

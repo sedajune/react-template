@@ -3,6 +3,7 @@ import Button from "../components/Button";
 import Typo from "../components/Typography";
 import Checky from "../components/Checkbox";
 import List from "../components/List";
+import ListItem from "../components/ListItem";
 /**
  * ## Reusable components
  * 1. Make a reusable Button component
@@ -13,18 +14,33 @@ import List from "../components/List";
 const Exercise = () => {
 	return (
 		<div>
-			<Typo variant={"headline"} className={"Hallo"}>
-				Test Typo
+			<Typo variant={"headline"} className={"Headache"}>
+				Welcome to the new age!
 			</Typo>
-			<Typo variant={"footnote"}>Test Typo</Typo>
-			<Button variant={"primary"} className={"irgendwas"} aria-label={"gelb"}>
+			<br />
+			<br />
+			<Button variant={"primary"} className={"push"} aria-label={"gelb"}>
 				Click me
 			</Button>
-			<Button variant={"secondary"} className={"irgendwas"} aria-label={"gelb"}>
-				Click me
+			<br />
+			<br />
+			<Button variant={"secondary"} className={"pull"} aria-label={"gelb"}>
+				Don´t click me
 			</Button>
-			<Checky></Checky>
-			<List>Apple pie</List>
+			<br />
+			<br />
+			<Checky label="I agree"></Checky>
+			<br />
+			<br />
+			<List></List>
+			<ListItem>Time</ListItem>
+			<ListItem>Money</ListItem>
+			<ListItem>Goals</ListItem>
+			<ListItem>Allies</ListItem>
+
+			<br />
+			<br />
+			<Typo variant={"footnote"}>See you soon my friend!</Typo>
 		</div>
 	);
 };
