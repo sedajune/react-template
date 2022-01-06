@@ -172,6 +172,8 @@ const Exercise = () => {
 			<ComponentD color="red" foo="foo" bar="bar" />
 			<h2>ComponentE</h2>
 			<ComponentE color="red" background="yellow" />
+			<ComponentE color="blue" background="pink" />
+			<ComponentE color="white" background="black" />
 			<h2>ComponentF</h2>
 			<ComponentF
 				src="https://images.unsplash.com/photo-1502691876148-a84978e59af8?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=300"

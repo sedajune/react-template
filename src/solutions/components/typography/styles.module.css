@@ -1,0 +1,83 @@
+.Typography {
+	font-family: sans-serif;
+}
+
+.h1 {
+	margin: 0.5em 0;
+	font-size: 3em;
+	font-weight: bold;
+}
+
+.h2 {
+	margin: 0.5em 0;
+	font-size: 2em;
+	font-weight: bold;
+}
+
+.h3 {
+	margin: 0.5em 0;
+	font-size: 1.75em;
+	font-weight: bold;
+}
+
+.h4 {
+	margin: 0.5em 0;
+	font-size: 1.5em;
+	font-weight: bold;
+}
+
+.h5 {
+	margin: 0.5em 0;
+	font-size: 1.25em;
+	font-weight: bold;
+}
+
+.h6 {
+	margin: 0.5em 0;
+	font-size: 1em;
+	font-weight: bold;
+}
+
+.subtitle1 {
+	margin: 0.5em 0;
+	font-size: 1.5em;
+	font-weight: bold;
+}
+
+.subtitle2 {
+	margin: 0.5em 0;
+	font-size: 1.25em;
+	font-weight: bold;
+}
+
+.body1 {
+	margin: 0.25em 0;
+	font-size: 1em;
+	font-weight: normal;
+}
+
+.body2 {
+	margin: 0.25em 0;
+	font-size: 0.8em;
+	font-weight: bold;
+}
+
+.button {
+	margin: 0;
+	font-size: 1em;
+	font-weight: normal;
+	text-transform: uppercase;
+}
+
+.caption {
+	margin: 0;
+	font-size: 0.8em;
+	font-weight: normal;
+}
+
+.overline {
+	margin: 0;
+	font-size: 1em;
+	font-weight: bold;
+	text-transform: uppercase;
+}

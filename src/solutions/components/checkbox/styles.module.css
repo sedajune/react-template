@@ -1,0 +1,18 @@
+.Input {
+	position: fixed;
+	top: 50%;
+	left: -100vw;
+}
+.Check {
+	height: 1em;
+	width: 1em;
+	background: red;
+}
+
+.Input:checked + .Check {
+	background: green;
+}
+
+.Input:focus + .Check {
+	box-shadow: 0 0 0 2px hotpink;
+}
