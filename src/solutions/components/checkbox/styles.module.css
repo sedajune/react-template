@@ -1,18 +1,59 @@
+.Checkbox {
+	user-select: none;
+}
+
 .Input {
 	position: fixed;
 	top: 50%;
 	left: -100vw;
 }
 .Check {
+	--check-color: currentColor;
+	--speed: 0.3s;
+	--stroke-width: 1px;
+	position: relative;
+	display: inline-block;
 	height: 1em;
 	width: 1em;
-	background: red;
 }
 
-.Input:checked + .Check {
-	background: green;
+.Check::before {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 100%;
+	box-shadow: inset var(--stroke-width) 0 0 0 var(--check-color),
+		inset 0 var(--stroke-width) 0 0 var(--check-color);
 }
 
-.Input:focus + .Check {
+.Check::after {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 100%;
+	box-shadow: inset calc(var(--stroke-width) * -1) 0 0 0 var(--check-color),
+		inset 0 calc(var(--stroke-width) * -1) 0 0 var(--check-color);
+	transition: transform var(--speed), width var(--speed), height var(--speed),
+		box-shadow var(--speed);
+	transition-delay: var(--speed), var(--speed), 0s, 0s;
+}
+
+.Input:checked + .Check::after {
+	--stroke-width: 2px;
+	transform: translate(80%, -25%) rotate(30deg);
+	width: 70%;
+	height: 150%;
+	transition-delay: 0s, 0s, var(--speed), var(--speed);
+}
+
+.Input:focus-visible + .Check {
 	box-shadow: 0 0 0 2px hotpink;
+}
+
+.Label {
+	padding-left: 1em;
 }

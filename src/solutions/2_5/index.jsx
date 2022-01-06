@@ -15,6 +15,23 @@ import Typography from "../components/typography";
 const Exercise = () => {
 	return (
 		<div>
+			<div style={{ margin: 100 }}>
+				<Checkbox
+					label="I accept the policy"
+					onChange={(event_) => {
+						console.log(event_.target.checked);
+					}}
+				/>
+				<br />
+				<Checkbox
+					label="I am always checked"
+					checked
+					onChange={(event_) => {
+						console.log(event_.target.checked);
+					}}
+				/>
+			</div>
+
 			<Typography variant="h1">Headline 1</Typography>
 			<Typography variant="h2">Headline 2</Typography>
 			<Typography variant="h3">Headline 3</Typography>
@@ -30,7 +47,7 @@ const Exercise = () => {
 			<Typography variant="overline">Overline</Typography>
 
 			<Typography variant="h1" component="h2">
-				Headline 1 as h1
+				Headline 1 as h2
 			</Typography>
 			<Typography variant="h2" component="h3">
 				Headline 2 as h3
@@ -38,18 +55,13 @@ const Exercise = () => {
 			<Typography variant="h1" component="h4">
 				Headline 2 as h4
 			</Typography>
-			<Typography variant="subtitle" component="h2">
+			<Typography variant="subtitle2" component="h2">
 				Subtitle 2 as h2
 			</Typography>
 
 			<br />
 			<br />
-			<Checkbox
-				label="Yes"
-				onChange={(event_) => {
-					console.log(event_.target.checked);
-				}}
-			/>
+
 			<br />
 			<br />
 			<Button
