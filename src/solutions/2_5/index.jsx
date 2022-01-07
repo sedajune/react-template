@@ -3,6 +3,7 @@ import List from "../components/list";
 import ListItem from "../components/list-item";
 import Button from "../components/button";
 import Checkbox from "../components/checkbox";
+import RadioButton from "../components/radio-button/index.jsx";
 import Typography from "../components/typography";
 
 /**
@@ -15,6 +16,24 @@ import Typography from "../components/typography";
 const Exercise = () => {
 	return (
 		<div>
+			<div style={{ margin: 100 }}>
+				<RadioButton
+					label="Male"
+					name="happy"
+					onChange={(event_) => {
+						console.log(event_.target.checked);
+					}}
+				/>
+				<br />
+				<RadioButton
+					label="Female"
+					name="happy"
+					onChange={(event_) => {
+						console.log(event_.target.checked);
+					}}
+				/>
+			</div>
+
 			<div style={{ margin: 100 }}>
 				<Checkbox
 					label="I accept the policy"

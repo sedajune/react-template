@@ -9,7 +9,7 @@
 }
 .Check {
 	--check-color: currentColor;
-	--speed: 0.3s;
+	--speed: 0.25s;
 	--stroke-width: 1px;
 	position: relative;
 	display: inline-block;
@@ -40,6 +40,7 @@
 	transition: transform var(--speed), width var(--speed), height var(--speed),
 		box-shadow var(--speed);
 	transition-delay: var(--speed), var(--speed), 0s, 0s;
+	transition-timing-function: ease-in-out;
 }
 
 .Input:checked + .Check::after {
