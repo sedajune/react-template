@@ -1,3 +1,39 @@
 .Checky {
-    
+	---check-color: green;
+	position: relative;
+	display: inline-block;
+	height: 1em;
+	width: 1 em;
+	background: red;
+}
+.input2 {
+	user-select: none;
+}
+.Checky::before {
+	content: "";
+	position: absolute;
+	inset: 0;
+	box-shadow: inset 1px 0 0 0 var(---check-color), inset 0 1px 0 0 var(---check-color);
+}
+.Checky::after {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 100%;
+	box-shadow: inset -1px 0 0 0 var(---check-color), inset 0 -1px 0 0 var(---check-color);
+	transition: transform 0.5s, width 0.5s, height 0.5s;
+}
+
+.Checky:checked + label {
+	margin-left: 25px;
+	border: 4px solid red;
+	box-shadow: 0 0 0 3px hotpink;
+	transform: translateX(5px) rotate(22.5deg);
+	width: 50%;
+}
+
+.Input:focus-visible + .Checky {
+	box-shadow: 0 0 0 2px hotpink;
 }

@@ -1,31 +1,36 @@
 import React from "react";
 import styles from "./styles.module.css";
 // Variant: headline, footnote
-const Typo = ({ children, className, variant, ...props }) => {
+
+const typeVariants = {
+	h1: "h1",
+	h2: "h2",
+	h3: "h3",
+	h4: "h4",
+	h5: "h5",
+	h6: "h6",
+	subtitle1: "h4",
+	subtitle2: "h5",
+	body1: "p",
+	body2: "p",
+	button: "span",
+	caption: "div",
+	overline: "div",
+};
+
+const Typo = ({
+	children,
+	className,
+	variant = "body1",
+	component = typeVariants[variant] ?? "span",
+	...rest
+}) => {
+	const Component = component;
 	return (
-		<span {...props} className={[styles.Typo, styles[variant], className].join(" ")}>
+		<Component {...rest} className={[styles.Typo, styles[variant], className].join(" ")}>
 			{children}
-		</span>
+		</Component>
 	);
 };
 
 export default Typo;
-
-// const tagNames = {
-// 	h1: "h1",
-// 	h2: "h2",
-// 	sub1: "p",
-// 	caption: "div",
-// 	button1: "span",
-// 	body1: "p",
-// };
-// const Typography = ({
-// 	children,
-// 	className,
-// 	variant = "body1",
-// 	component = tagNames[variant] ?? "span",
-// }) => {
-// 	const Component = component;
-// 	return <Component className={[className, styles[variant]].join(" ")}>{children}</Component>;
-// };
-// export default Typography;

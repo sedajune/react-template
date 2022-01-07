@@ -14,10 +14,15 @@ import ListItem from "../components/ListItem";
 const Exercise = () => {
 	return (
 		<div>
-			<Typo variant={"headline"} className={"Headache"}>
+			<Typo variant="h5" component="h3">
 				Welcome to the new age!
 			</Typo>
-			<br />
+			<Typo variant="h4" component="h1">
+				Welcome to the new age!
+			</Typo>
+			<Typo variant="h1" component="h3">
+				Welcome to the new age!
+			</Typo>
 			<br />
 			<Button variant={"primary"} className={"push"} aria-label={"gelb"}>
 				Click me
@@ -29,18 +34,19 @@ const Exercise = () => {
 			</Button>
 			<br />
 			<br />
+
 			<Checky label="I agree"></Checky>
 			<br />
 			<br />
-			<List></List>
-			<ListItem>Time</ListItem>
-			<ListItem>Money</ListItem>
-			<ListItem>Goals</ListItem>
-			<ListItem>Allies</ListItem>
-
+			<List>
+				<ListItem>Time</ListItem>
+				<ListItem>Money</ListItem>
+				<ListItem>Goals</ListItem>
+				<ListItem>Allies</ListItem>
+			</List>
 			<br />
 			<br />
-			<Typo variant={"footnote"}>See you soon my friend!</Typo>
+			<Typo variant="caption">See you soon my friend!</Typo>
 		</div>
 	);
 };
